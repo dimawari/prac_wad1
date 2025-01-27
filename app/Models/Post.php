@@ -10,10 +10,8 @@ class Post extends Model
 {
     use HasFactory;
 
-    // Protect fields from mass assignment vulnerability
-    protected $fillable = ['title', 'body', 'user_id'];
+        protected $fillable = ['title', 'body', 'user_id'];
 
-    // Relationship: A Post belongs to a User
     public function user()
     {
         return $this->belongsTo(User::class);
